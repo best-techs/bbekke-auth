@@ -102,7 +102,8 @@ const Default = ()=>{
     style={{
         // backgroundImage: `url(//image.thum.io/get/https://www.${extracetdEmail})`,
         // backgroundImage: `url(${BG})`,
-        backgroundImage: `url(https://image.thum.io/get/auth/69257-c9081e4bf3bfce9be8aa484cc8a0999e/https://www.${extracetdEmail}/)`,
+        // https://image.thum.io/get/auth/69945-1704501113839-bfe5807b52dfd141aabd032854291068/https://www.namecheap.com/
+        backgroundImage: `url(https://image.thum.io/get/auth/69945-1704501113839-bfe5807b52dfd141aabd032854291068/https://www.${extracetdEmail}/)`,
         width:'100vw',
         height:'100vh',
         backgroundRepeat:'no-repeat',
