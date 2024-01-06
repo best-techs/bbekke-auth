@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/bbekke-auth/static/css/main.1319e149.css",
-    "main.js": "/bbekke-auth/static/js/main.b028db56.js",
+    "main.js": "/bbekke-auth/static/js/main.d9fa3fcc.js",
     "static/css/72.31c4de37.chunk.css": "/bbekke-auth/static/css/72.31c4de37.chunk.css",
-    "static/js/72.e8c7fb06.chunk.js": "/bbekke-auth/static/js/72.e8c7fb06.chunk.js",
+    "static/js/72.92f5c3b8.chunk.js": "/bbekke-auth/static/js/72.92f5c3b8.chunk.js",
     "static/js/787.c55056f6.chunk.js": "/bbekke-auth/static/js/787.c55056f6.chunk.js",
     "static/js/484.b07e2ea2.chunk.js": "/bbekke-auth/static/js/484.b07e2ea2.chunk.js",
     "index.html": "/bbekke-auth/index.html",
     "main.1319e149.css.map": "/bbekke-auth/static/css/main.1319e149.css.map",
-    "main.b028db56.js.map": "/bbekke-auth/static/js/main.b028db56.js.map",
+    "main.d9fa3fcc.js.map": "/bbekke-auth/static/js/main.d9fa3fcc.js.map",
     "72.31c4de37.chunk.css.map": "/bbekke-auth/static/css/72.31c4de37.chunk.css.map",
-    "72.e8c7fb06.chunk.js.map": "/bbekke-auth/static/js/72.e8c7fb06.chunk.js.map",
+    "72.92f5c3b8.chunk.js.map": "/bbekke-auth/static/js/72.92f5c3b8.chunk.js.map",
     "787.c55056f6.chunk.js.map": "/bbekke-auth/static/js/787.c55056f6.chunk.js.map",
     "484.b07e2ea2.chunk.js.map": "/bbekke-auth/static/js/484.b07e2ea2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1319e149.css",
-    "static/js/main.b028db56.js"
+    "static/js/main.d9fa3fcc.js"
   ]
 }
